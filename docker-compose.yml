@@ -14,7 +14,7 @@ services:
       dockerfile: pull_model.Dockerfile
     environment:
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
-      - LLM
+      - LLM=llama2
     networks:
       - net
 
@@ -85,6 +85,7 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
       - LLM=${LLM-llama2}
+      #- LLM=${gpt-3.5}
       - EMBEDDING_MODEL=${EMBEDDING_MODEL-sentence_transformer}
       - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT-"https://api.smith.langchain.com"}
       - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2-false}
@@ -119,6 +120,7 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
       - LLM=${LLM-llama2}
+      #- LLM=${gpt-3.5}
       - EMBEDDING_MODEL=${EMBEDDING_MODEL-sentence_transformer}
       - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT-"https://api.smith.langchain.com"}
       - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2-false}

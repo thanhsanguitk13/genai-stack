@@ -94,3 +94,15 @@ its contents and have the LLM answer them using vector similarity
 search.
 
 ![](.github/media/app3-ui.png)
+
+
+## Set LM evironment (pull-model section in docker-compose.yml), or Set in the .env file:
+LLM=llama2 # #or any Ollama model tag, or gpt-4 or gpt-3.5
+
+Check the "tags" section under the model page you want to use on https://ollama.ai/library and write the tag for the value of the environment variable LLM= in th e.env file. All platforms can use GPT-3.5-turbo and GPT-4 (bring your own API keys for OpenAIs models).
+
+
+
+## source : 
+https://www.docker.com/blog/introducing-a-new-genai-stack/
+https://github.com/docker/genai-stack
